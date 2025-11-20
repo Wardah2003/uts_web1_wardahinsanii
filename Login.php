@@ -13,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'] ?? '';
 
     // Login sederhana (username: admin, password: 123)
-    if ($username == 'nadia' && $password === '12345') {
+    if ($username == 'wardah' && $password === '12345') {
         $_SESSION['username'] = $username;
-        $_SESSION['role'] = 'mahasiswa';
+        $_SESSION['role'] = 'Dosen';
         header("Location: dashboard.php");
         exit;
     } else {
@@ -27,10 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Polgan Mart</title>
 </head>
 <body>
-    <h2>Form Login</h2>
+    <h2>Polgan Mart</h2>
     <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
     <form method="post">
         Username: <input type="text" name="username" required><br><br>
